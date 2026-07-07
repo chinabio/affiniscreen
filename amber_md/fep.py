@@ -157,6 +157,12 @@ v2.4.12 PATCHES (kept):
   B. FEPAnalyzer.run() rejects insane MBAR (|dG|>500 or NaN err),
      records headline_estimator in the result.
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
+# Portions ported/adapted from FEP-SPell-ABFE (freeenergylab, MIT License).
 
 # -*- coding: utf-8 -*-
 # Author:    Pulan Yu

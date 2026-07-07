@@ -19,6 +19,12 @@ receptor atoms (Boresch 2003; Deng & Roux JCTC 2006):
     beta   : dihedral  P2-P1-L1-L2
     phi    : dihedral  P3-P2-P1-L1
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
+# Portions ported/adapted from FEP-SPell-ABFE (freeenergylab, MIT License).
 from __future__ import annotations
 import os
 import subprocess

@@ -28,6 +28,11 @@ Exit codes (match the in-pipeline analyzer):
     3  analyzer raised an exception
     4  usage / discovery error (bad leg dir, no lambdas found)
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 from __future__ import annotations
 
 import argparse

@@ -34,6 +34,11 @@ Exit codes:
     2  no dG_bind could be produced for any edge (missing/failed legs)
     4  usage / discovery error
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 from __future__ import annotations
 
 import argparse

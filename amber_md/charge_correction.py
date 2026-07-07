@@ -35,6 +35,12 @@ REQUIREMENTS
 This module is import-safe: heavy/optional deps are imported lazily inside the
 functions so the rest of the workflow can import it without APBS installed.
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
+# Portions ported/adapted from FEP-SPell-ABFE (freeenergylab, MIT License).
 
 from __future__ import annotations
 import math

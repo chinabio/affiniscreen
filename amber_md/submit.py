@@ -29,6 +29,11 @@ v2.4.9:
 v2.4.8:
   * In-job MM/GBSA tail-block also generates an HTML report.
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 
 # -*- coding: utf-8 -*-
 # Author:    Pulan Yu

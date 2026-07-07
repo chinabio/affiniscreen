@@ -21,6 +21,11 @@ It does NOT burn real FEP hours. Checks, in order:
 Exit 0 => GO. Non-zero => at least one BLOCKER; details in stdout and
 <work-dir>/abfe_preflight_report.json.
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 from __future__ import annotations
 import argparse, json, shutil, subprocess, sys, tempfile, textwrap
 from pathlib import Path

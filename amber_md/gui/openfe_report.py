@@ -6,6 +6,11 @@ matching file as one *replicate* (the replicate COUNT is whatever is on disk --
 1, 2, 3, 5, ... -- never hard-coded), decodes the embedded MBAR diagnostics,
 and emits one self-contained HTML per ligand plus a campaign index.html.
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 from __future__ import annotations
 import base64
 import math, bz2, io, json, re, statistics, zipfile

@@ -1,4 +1,9 @@
 """Launch-time guard against production-timestep regressions (v2.5.62)."""
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 from __future__ import annotations
 MAX_PROD_DT_PS = 0.001
 class UnsafeTimestepError(RuntimeError): pass

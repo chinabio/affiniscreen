@@ -20,6 +20,11 @@ Usage
 
 Exit code is 0 iff every window of every leg ends complete.
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 from __future__ import annotations
 
 import argparse

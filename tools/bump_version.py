@@ -6,6 +6,11 @@ then verify with check_version_sync. Does NOT write the changelog/What's-new pro
 Touchpoints written: amber_md/__init__.py (__version__), VERSION, run_amber.py,
 README.md banner. It also checks that Home.py already has a "What's new in vNEW".
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 from __future__ import annotations
 import re, sys
 from pathlib import Path

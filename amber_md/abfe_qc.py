@@ -14,6 +14,11 @@ Usage:
     python abfe_qc.py <work-dir>          # e.g. ~/abfe_smoketest_2026...
     python abfe_qc.py <work-dir> --json   # machine-readable
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 import argparse, json, sys
 from pathlib import Path
 

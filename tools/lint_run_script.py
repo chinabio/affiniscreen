@@ -5,6 +5,11 @@ R1 errexit+pipefail; R2 no unguarded bare command-substitution under errexit;
 R3 box-drift escalation markers (warn); R4 non-inverted #BSUB array ranges.
 Exit 0 clean, 1 on >=1 ERROR. Usage: lint_run_script.py <script.lsf> [...] | --self-test
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 from __future__ import annotations
 import re, sys
 ERROR, WARN = "ERROR", "WARN"

@@ -1,4 +1,9 @@
 """Scheduler interface."""
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 from __future__ import annotations
 from abc import ABC, abstractmethod
 from typing import Sequence

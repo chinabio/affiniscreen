@@ -29,6 +29,11 @@ WARNING: OpenFE 1.x API attribute names shift between releases. Fragile settings
 assignments are guarded; if one is missing on your build the planner logs a
 warning and proceeds with the protocol default rather than crashing.
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 
 # -*- coding: utf-8 -*-
 # Author:    Pulan Yu

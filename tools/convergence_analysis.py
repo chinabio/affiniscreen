@@ -38,6 +38,11 @@ Method
 
 Everything is logged to BOTH stdout and <out>.log so it can be uploaded.
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 import os, re, sys, glob, math, argparse, datetime
 
 KB = 0.0019872041  # kcal/mol/K

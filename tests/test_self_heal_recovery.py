@@ -1,4 +1,9 @@
 """v2.5.15 regression: window recovery (purge + clean rebuild)."""
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 import shutil
 from pathlib import Path
 from amber_md.abfe_self_heal_cli import (

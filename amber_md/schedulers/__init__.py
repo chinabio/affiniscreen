@@ -6,6 +6,11 @@ SLURM backend can be added in ONE place rather than scattered `if lsf/slurm`
 checks. The LSF backend wraps the existing behaviour; the SLURM backend is a
 deliberate stub that raises until validated on a real cluster.
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 from __future__ import annotations
 from .base import Scheduler, SchedulerError
 from .lsf import LSFScheduler

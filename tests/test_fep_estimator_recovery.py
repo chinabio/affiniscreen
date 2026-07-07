@@ -22,6 +22,11 @@ They lock in two behaviours:
 
 Run:  pytest -q test_fep_estimator_recovery.py
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 import os
 import re
 import numpy as np

@@ -5,6 +5,11 @@
 Run from the package root (the dir containing amber_md/):
     python tools/check_dt_regression.py
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 import sys, os, re, io, ast, tokenize, dataclasses
 
 HERE = os.path.dirname(os.path.abspath(__file__))

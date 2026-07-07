@@ -9,6 +9,11 @@ config file (YAML/JSON) and read by the other pages as their field defaults.
 Resolution order: $BFEP_SITE_CONFIG -> ~/.bfep/site_config.* -> <repo>/site_config.* -> built-in defaults.
 """
 # -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
+# -*- coding: utf-8 -*-
 from __future__ import annotations
 
 import shutil

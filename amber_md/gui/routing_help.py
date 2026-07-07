@@ -6,6 +6,10 @@ Single source of truth for "which page do I use?" across method x engine x
 molecule-count. Rendered as a help expander on Results-Compare (and reusable on
 any page). Streamlit is imported lazily so the table can be tested headless.
 """
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 from __future__ import annotations
 
 # (method, engine, count, plan, submit, monitor, results)

@@ -13,6 +13,11 @@ is always valid YAML, so the loader accepts both regardless.
 
 Nothing here imports Streamlit, so it is safe to use from the CLI / engine code.
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 from __future__ import annotations
 
 import json

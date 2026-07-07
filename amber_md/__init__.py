@@ -136,6 +136,12 @@
 #                observed 10x loop + false STAGE FAILED). Mirrors the reference platform resume-
 #                from-checkpoint design (never restarts a whole segment).
 """AffiniScreen."""
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
+# Portions ported/adapted from FEP-SPell-ABFE (freeenergylab, MIT License).
 
 # -*- coding: utf-8 -*-
 # Author:    Pulan Yu

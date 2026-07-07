@@ -16,6 +16,12 @@ it is a common cause of eq blow-ups.
 This produces the per-step mdin files and an ordered run list. It does NOT
 submit anything (no subprocess) so it is safe to generate and inspect.
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
+# Portions ported/adapted from FEP-SPell-ABFE (freeenergylab, MIT License).
 from __future__ import annotations
 from collections import OrderedDict
 from pathlib import Path

@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 """validate_mdin.py (amber_md v2.5.31) -- CLI wrapper around amber_md.mdin_validator."""
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 from __future__ import annotations
 import sys
 from pathlib import Path

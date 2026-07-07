@@ -35,6 +35,11 @@ USAGE:
 
 Pure standard library + (optional) numpy. No GPU. Read-only on prod.out files.
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 import argparse
 import csv
 import math

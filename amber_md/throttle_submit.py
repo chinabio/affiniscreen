@@ -20,6 +20,11 @@ Usage:
     python -m amber_md.throttle_submit --joblist jobs.json \
         --max-inflight 8 --name-prefix mmgbsa_run42 [--poll 30] [--submit-gap 3]
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 from __future__ import annotations
 import argparse
 import json

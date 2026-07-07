@@ -15,6 +15,11 @@ Usage:
 
 Exit 0 = all clean, 1 = TI keyword found, 2 = usage / no mdin found.
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 import sys
 from pathlib import Path
 

@@ -33,6 +33,12 @@ If you omit the prmtop/inpcrd files the script runs in --paper-mode: it does
 not touch FEPSetup and instead validates the schedules + a freshly rendered
 mdin string for each stage (no files needed). Good for a pure config check.
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
+# Portions ported/adapted from FEP-SPell-ABFE (freeenergylab, MIT License).
 
 from __future__ import annotations
 import argparse

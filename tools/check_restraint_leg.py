@@ -14,6 +14,11 @@ if present. Exit code 0 = reliable, 1 = UNRELIABLE, 2 = usage/IO error.
 Usage:
     python tools/check_restraint_leg.py <leg_dir> [--dvdl-max 200] [--barti-max 50]
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 import csv
 import sys
 from pathlib import Path

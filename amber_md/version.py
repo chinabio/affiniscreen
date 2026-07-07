@@ -13,6 +13,11 @@ The banner is pure shell comments (lines starting with '#'), so it never
 affects execution. It also `echo`-able marker can be emitted at runtime via
 runtime_echo() so the version shows up in the job's stdout too.
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 from __future__ import annotations
 
 import datetime as _dt

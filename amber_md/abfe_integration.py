@@ -18,6 +18,12 @@ Policy (per user decision, v2.5.17):
 This module is import-light and subprocess-free at import time; cpptraj is only
 invoked inside prepare_complex_boresch() at run time, via the ported helpers.
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
+# Portions ported/adapted from FEP-SPell-ABFE (freeenergylab, MIT License).
 from __future__ import annotations
 from pathlib import Path
 

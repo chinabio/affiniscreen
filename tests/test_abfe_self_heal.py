@@ -5,6 +5,11 @@ Uses the same fixtures as the estimator regression test:
 
 Run:  pytest -q test_abfe_self_heal.py
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 import os
 import shutil
 import textwrap

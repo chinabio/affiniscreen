@@ -5,6 +5,11 @@ validated on a real SLURM cluster. Every method raises SchedulerError so a
 misconfigured site fails loudly instead of silently generating broken jobs.
 Remove the guards and test end-to-end before enabling `scheduler.type: slurm`.
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 from __future__ import annotations
 from typing import Sequence
 from .base import Scheduler, SchedulerError

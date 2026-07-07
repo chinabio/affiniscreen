@@ -32,6 +32,11 @@ Outputs:
   analysis/COMBINED_REPORT.html
   analysis/summary.json   <-- consumed by build_screen_summary.py
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 
 # -*- coding: utf-8 -*-
 # Author:    Pulan Yu

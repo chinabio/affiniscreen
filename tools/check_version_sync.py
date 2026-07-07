@@ -10,6 +10,11 @@ Touchpoints checked:
   * amber_md/gui/Home.py   a "#### What's new in vX" heading must exist for X
 Exit 0 = all in sync; non-zero = drift (prints the offenders).
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 from __future__ import annotations
 import re, sys
 from pathlib import Path

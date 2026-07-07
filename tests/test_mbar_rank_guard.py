@@ -1,4 +1,9 @@
 """v2.5.15 regression: MBAR rank guard."""
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 import numpy as np
 import pandas as pd
 from amber_md.fep import FEPAnalyzer, _UNK_COND_MAX

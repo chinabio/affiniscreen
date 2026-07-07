@@ -1,4 +1,9 @@
 """v2.5.15 regression: completeness gate + recovery logging."""
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 import json
 from pathlib import Path
 from amber_md.recovery import (

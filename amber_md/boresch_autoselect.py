@@ -24,6 +24,12 @@ atoms, their RMSF, the resulting geometry, and pass/fail of every check.
 Runtime deps: parmed, numpy, and cpptraj (for RMSF). cpptraj is invoked by the
 caller-provided `rmsf_fn` so this module stays subprocess-free and testable.
 """
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
+# Portions ported/adapted from FEP-SPell-ABFE (freeenergylab, MIT License).
 from __future__ import annotations
 import math
 from pathlib import Path

@@ -1,4 +1,9 @@
 """LSF backend -- wraps the historical `bsub`/`bjobs`/`bkill` behaviour."""
+# -*- coding: utf-8 -*-
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
+# Part of AffiniScreen.
 from __future__ import annotations
 from typing import Sequence
 from .base import Scheduler
