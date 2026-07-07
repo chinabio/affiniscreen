@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Author:    AffiniScreen contributors
+# Author:    Pulan Yu
 # Part of AffiniScreen.
 """Amber-TI RBFE campaign adapter (final61). Mirrors openfe_campaign's API so
 the shared FEP Campaign page can drive either engine behind an engine selector.

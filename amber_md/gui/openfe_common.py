@@ -16,9 +16,9 @@ Verified against the openfe 1.11.x CLI:
 """
 
 # -*- coding: utf-8 -*-
-# Author:    AffiniScreen contributors
-# Maintainer: AffiniScreen team
-# Contact:   (see repository)
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
 # Part of AffiniScreen.
 
 from __future__ import annotations

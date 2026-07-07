@@ -6,8 +6,8 @@ build-backend = "setuptools.build_meta"
 name = "affiniscreen"
 description = "AffiniScreen: MM-GBSA (Amber/OpenMM) + OpenFE ABFE/RBFE (internal)"
 license = { text = "MIT" }
-authors = [{ name = "AffiniScreen contributors" }]
-maintainers = [{ name = "AffiniScreen team" }]
+authors = [{ name = "Pulan Yu", email = "chinabio@gmail.com" }]
+maintainers = [{ name = "Pulan Yu", email = "chinabio@gmail.com" }]
 readme = "README.md"
 requires-python = ">=3.10"
 dynamic = ["version"]

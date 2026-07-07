@@ -13,7 +13,7 @@ Amber ABFE/RBFE GUI surface. The Amber engine code is still shipped in the
 package for programmatic use.
 """
 # -*- coding: utf-8 -*-
-# Author:    AffiniScreen contributors
+# Author:    Pulan Yu
 # Part of AffiniScreen.
 
 from __future__ import annotations

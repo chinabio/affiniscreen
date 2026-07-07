@@ -17,9 +17,9 @@ Requires: rdkit (in your amber-md conda env: `conda install -c conda-forge rdkit
 """
 
 # -*- coding: utf-8 -*-
-# Author:    AffiniScreen contributors
-# Maintainer: AffiniScreen team
-# Contact:   (see repository)
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
 # Part of AffiniScreen.
 
 import sys, re

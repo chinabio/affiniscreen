@@ -12,9 +12,9 @@ submitting bsub, spawning gather) are isolated in small functions a UI layer
 calls; everything else is queryable status.
 """
 # -*- coding: utf-8 -*-
-# Author:    AffiniScreen contributors
-# Maintainer: AffiniScreen team
-# Contact:   (see repository)
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
 # Part of AffiniScreen.
 
 from __future__ import annotations

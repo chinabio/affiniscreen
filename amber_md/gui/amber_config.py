@@ -14,9 +14,9 @@ fep_driver ABFE entrypoint (--auto-boresch / --boresch-json). Those flags are
 emitted by the wizard's command builder, not here.
 """
 # -*- coding: utf-8 -*-
-# Author:    AffiniScreen contributors
-# Maintainer: AffiniScreen team
-# Contact:   (see repository)
+# Author:    Pulan Yu
+# Developer: Pulan Yu <chinabio@gmail.com>
+# Contact:   chinabio@gmail.com
 # Part of AffiniScreen.
 
 from __future__ import annotations
