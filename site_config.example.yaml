@@ -1,0 +1,47 @@
+# Site / environment configuration for the AffiniScreen.
+#
+# Copy to one of (first found wins):
+#   $BFEP_SITE_CONFIG
+#   ~/.bfep/site_config.yaml
+#   <repo>/site_config.yaml
+# Edit values for YOUR cluster. Anything omitted falls back to built-in defaults
+# (see amber_md/site_config.py). This file is also valid JSON-friendly YAML.
+
+scheduler:
+  type: lsf              # lsf | slurm (stub) | local
+  submit_cmd: bsub
+  query_cmd: bjobs
+  cancel_cmd: bkill
+  gpu_queue: gpu
+  cpu_queue: normalQ
+  project: your-project   # LSF project / SLURM account
+  walltime: "24:00"
+  max_concurrent: 8
+
+resources:
+  n_gpu: 1
+  n_gpu_slots: 1
+  gpu_request_mode: rusage         # rusage | slots
+  gpu_cpu_cores: 8
+  fep_gpu_cores: 16
+  fep_mem_mb: 8192
+  cpu_settle_cap_gpu: 32
+  cpu_settle_cap_cpu: 48
+  n_cpu: 8
+  avoid_hosts: []                  # e.g. [gpu-node-01, gpu-node-02]
+
+amber:
+  amberhome: ""                     # leave blank to use the environment/modules
+  module_load: [gcc/11.5, cuda/11.8, amber/22.8]
+  pmemd_cuda: pmemd.cuda
+  charge_method: bcc
+
+openfe:
+  conda_env: openfe
+  python_bin: ""                    # explicit interpreter overrides conda_env
+  small_molecule_ff: openff-2.1.0
+
+paths:
+  default_run_dir: ~/Run_dir
+  scratch_dir: ""
+  venv_activate: ./activate_amber_md.sh

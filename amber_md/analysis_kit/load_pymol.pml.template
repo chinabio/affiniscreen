@@ -1,0 +1,26 @@
+# load_pymol.pml.template -- placeholders: {{TOP_REL}} {{TRAJ_REL}} {{LIG}}
+# Paths are RELATIVE to analysis/ (which is where the file is copied).
+load    {{TOP_REL}}, complex
+load_traj {{TRAJ_REL}}, complex, state=1, interval=10
+
+hide everything
+bg_color white
+show cartoon, polymer.protein
+color grey80, polymer.protein
+
+select lig, resn {{LIG}} or (hetatm and not resn HOH+WAT+NA+CL+K+MG+ZN+CA)
+show sticks, lig
+color magenta, lig
+util.cnc lig
+
+hide everything, resn HOH+WAT+NA+CL+K+MG+ZN
+remove resn HOH+WAT
+
+select pocket, byres (polymer.protein within 5 of lig)
+show lines, pocket
+color cyan, pocket and elem C
+
+zoom lig, 8
+set ray_shadow, 0
+set cartoon_transparency, 0.15
+mplay

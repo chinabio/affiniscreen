@@ -1,0 +1,1 @@
+# v2.5.31g: add pyproject.toml -> `pip install -e .` works. Dynamic version from amber_md.__version__. parmed/pytraj excluded (Amber-provided). extras: [analysis],[gui]. scripts: amber-fep-driver, run-amber.

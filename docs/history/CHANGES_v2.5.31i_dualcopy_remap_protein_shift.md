@@ -1,0 +1,1 @@
+# v2.5.31i: dual-copy Boresch remap protein shift +n_lig -> +2*n_lig (two ligand copies precede protein). Fixes iat=...,10567 (should 10604) -> RESTRAINT 49,000 -> gate r=65.21 FAIL. Added :2-region guard.

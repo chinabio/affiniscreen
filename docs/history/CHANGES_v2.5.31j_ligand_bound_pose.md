@@ -1,0 +1,1 @@
+# v2.5.31j: dual-copy restraint build extracts ligand BOUND POSE from complex (cpptraj) and transplants coords into LIG.mol2 before combine. Fixes RESTRAINT Dist ~39,000 (r~63A). Adds post-build pocket guard.

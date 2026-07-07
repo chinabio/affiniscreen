@@ -1,0 +1,1 @@
+# v2.5.32: retire dual-copy restraint topology; restraint leg = Boresch rk(lambda)=lambda*k scaling on the real complex (identical TI ends). decharge/vdw keep fixed full k. Fixes complex_restraint dG=-125 -> small physical value.

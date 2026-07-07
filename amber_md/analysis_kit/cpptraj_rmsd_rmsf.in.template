@@ -1,0 +1,73 @@
+# cpptraj_rmsd_rmsf.in.template  (v7 -- correct action ordering)
+# Placeholders: {{TOP_REL}}  {{TRAJ_REL}}  {{LIG}}
+
+parm   {{TOP_REL}}
+trajin {{TRAJ_REL}} 1 last 1
+reference {{TRAJ_REL}} 1 1 [ref1]
+autoimage
+
+# --- Strip solvent + ions (safe: unknown names are skipped) ----------
+strip :WAT
+strip :HOH
+strip :TIP3
+strip :TIP4
+strip :TIP5
+strip :T3P
+strip :T4P
+strip :SOL
+strip :SPC
+strip :SPCE
+strip :Na+
+strip :Cl-
+strip :K+
+strip :Mg+2
+strip :Zn+2
+strip :Ca+2
+strip :Br-
+strip :Li+
+strip :Rb+
+strip :Cs+
+strip :F-
+strip :IOD
+strip :SOD
+strip :CLA
+strip :POT
+strip :MG
+strip :ZN
+strip :CA2
+strip :CAL
+
+# Sanity check
+resinfo :{{LIG}}
+
+# --- RMSD (fit on backbone, no-fit on ligand) ------------------------
+rms first @CA,C,N out rmsd_backbone.dat mass
+rms first :{{LIG}}&!@H= out rmsd_ligand.dat mass nofit
+
+# --- H-bonds: ligand <-> protein -------------------------------------
+hbond LIGHB out hbond_count.dat \
+      donormask :{{LIG}} acceptormask !:{{LIG}} \
+      avgout hbond_avg.dat printatomnum nointramol
+hbond LIGHB2 out hbond_count2.dat \
+      donormask !:{{LIG}} acceptormask :{{LIG}} \
+      avgout hbond_avg2.dat printatomnum nointramol
+
+# --- Pocket contacts: per-residue, per-frame -------------------------
+nativecontacts name LIGNC \
+               :{{LIG}}&!@H= !:{{LIG}}&!@H= \
+               ref [ref1] byresidue distance 5.0 mindist maxdist \
+               writecontacts contacts_summary.dat \
+               resout        contacts_byres.dat \
+               series        seriesout contacts_series.dat \
+               map  mapout   contact_map.gnu
+
+run
+
+# --- RMSF on a fresh pass (this stripping is local to this block) ----
+average crdset AVG @CA,C,N
+run
+rms ref AVG @CA,C,N
+atomicfluct out rmsf_byres.dat :1-9999@CA byres
+run
+
+quit

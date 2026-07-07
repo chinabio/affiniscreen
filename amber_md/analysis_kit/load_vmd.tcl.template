@@ -1,0 +1,32 @@
+# load_vmd.tcl.template -- placeholders: {{TOP_REL}} {{TRAJ_REL}} {{LIG}}
+set top  "{{TOP_REL}}"
+set traj "{{TRAJ_REL}}"
+
+mol new     $top  type parm7  waitfor all
+mol addfile $traj type netcdf waitfor all step 1
+
+mol delrep 0 top
+mol representation NewCartoon
+mol selection      "protein"
+mol color          ColorID 6
+mol addrep         top
+
+mol representation Licorice 0.25 12 12
+mol selection      "resname {{LIG}} or (not protein and not water and not ion)"
+mol color          Name
+mol addrep         top
+
+mol representation Lines
+mol selection      "protein and (same residue as (within 5 of (resname {{LIG}})))"
+mol color          ColorID 4
+mol addrep         top
+
+display projection Orthographic
+display depthcue   off
+color   Display    Background white
+axes    location   Off
+
+set sel [atomselect top "resname {{LIG}}"]
+if {[$sel num] > 0} { set c [measure center $sel]; molinfo top set center [list $c] }
+$sel delete
+animate goto 0

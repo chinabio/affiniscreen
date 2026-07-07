@@ -1,0 +1,27 @@
+# Runtime dependencies for the AffiniScreen GUI + analysis.
+#
+# NOTE: Do NOT pip-install parmed / pytraj here -- Amber provides them via
+# PYTHONPATH, and pip-installing can shadow/break the Amber build. On an HPC
+# node, prefer the conda environment (environment.yml).
+#
+# Amber-22 ships parmed/pytraj built against NumPy 1.x, so NumPy is pinned <2.
+numpy<2
+scipy
+pandas<3
+matplotlib
+
+# GUI
+streamlit
+nglview
+
+# Site config (optional: JSON fallback works without it)
+PyYAML
+
+# Free-energy analysis
+MDAnalysis
+pymbar
+alchemlyb
+
+# mdtraj is optional and requires numpy>=2 (conflicts with the numpy<2 pin that
+# Amber parmed needs). Install it deliberately, ideally in a separate env:
+#   pip install "mdtraj<1.10"

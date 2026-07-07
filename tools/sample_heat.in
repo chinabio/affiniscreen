@@ -1,0 +1,26 @@
+FEP NVT heat (TEMP0 ramp), lambda=0.500
+&cntrl
+  imin=0, irest=0, ntx=1,
+  nstlim=100000, dt=0.001,
+  ntc=2, ntf=1, ntt=3, gamma_ln=5.0, ig=-1,
+  tempi=5.0, temp0=298.0,
+  ntb=1, ntp=0, cut=10.0,
+  ntr=1, restraint_wt=5.0,
+  restraintmask='!:WAT,Na+,Cl-,K+,Cl*,Na*,HOH & !@H=',
+  nscm=0, ntwr=25000,
+  ntpr=1000, ntwx=0, ioutfm=1,
+  vlimit=20.0,
+  icfe=1, ifsc=1, clambda=0.500,
+  timask1=':LIA', timask2=':LIB',
+  scmask1=':LIA', scmask2=':LIB',
+  scalpha=0.2, scbeta=50.0, gti_add_sc=1,  ! ... full soft-core block here
+  nmropt=1,
+/
+&wt
+ type = 'TEMP0',
+ istep1 = 0, istep2 = 80000,
+ value1 = 5.0, value2 = 298.0,
+ /
+ &wt
+ type = 'END',
+ /

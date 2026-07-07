@@ -1,0 +1,25 @@
+# cpptraj_rmsd_rmsf.in  (v2 -- adds hbond + contacts)
+parm   ../complex_solv.prmtop
+trajin ../md/prod.nc 1 last 1
+autoimage
+
+rms first @CA,C,N out rmsd_backbone.dat mass
+rms first :LIG&!@H= out rmsd_ligand.dat mass nofit
+
+average crdset AVG @CA,C,N
+run
+rms ref AVG @CA,C,N
+atomicfluct out rmsf_byres.dat :1-9999@CA byres
+
+hbond LIGHB :LIG out hbond_count.dat \
+      avgout hbond_avg.dat printatomnum nointramol
+
+nativecontacts name LIGNC :LIG reference \
+               byresidue distance 5.0 mindist maxdist \
+               writecontacts contacts_summary.dat \
+               resout       contacts_byres.dat \
+               series       seriesout contacts_series.dat \
+               map  mapout  contact_map.gnu
+
+go
+quit

@@ -1,0 +1,1 @@
+# v2.5.31l: box-drift regrid prod_regrid.in heredoc was quoted -> clambda=${LAM} written literally -> pmemd namelist error -> all regrid retries failed (lambda=0.750). Unquoted the heredoc + added non-numeric clambda guard (exit 74).

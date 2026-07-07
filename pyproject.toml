@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "affiniscreen"
+description = "AffiniScreen: MM-GBSA (Amber/OpenMM) + OpenFE ABFE/RBFE (internal)"
+license = { text = "MIT" }
+authors = [{ name = "AffiniScreen contributors" }]
+maintainers = [{ name = "AffiniScreen team" }]
+readme = "README.md"
+requires-python = ">=3.10"
+dynamic = ["version"]
+# NOTE: parmed and pytraj are intentionally NOT listed. Amber provides them via
+# PYTHONPATH; pip-installing them can shadow/break the Amber build. Install the
+# scientific stack via environment.yml (conda) on the login node. These are the pure-pip
+# deps that are safe to resolve in the amber-md env.
+dependencies = [
+    # Amber-22 ships parmed/pytraj built against NumPy 1.x; NumPy 2.0's
+    # np.array(copy=False) raises and crashes that parmed. Pin <2 so editable
+    # install cannot silently upgrade NumPy. (v2.5.31h)
+    "numpy<2",
+    "scipy",
+    # v2.5.47: pandas 3.0 is brand new and not yet validated against this
+    # workflow's analyzer; pin <3 so an editable install cannot silently jump
+    # to a major release that may change groupby/concat/index semantics.
+    "pandas<3",
+    "matplotlib",
+]
+
+[project.optional-dependencies]
+# Heavier / analysis extras. Install with:  pip install -e .[analysis]
+analysis = [
+    "MDAnalysis",
+    "pymbar",
+    "alchemlyb",
+]
+# v2.5.47: mdtraj 1.11+ requires numpy>=2, which conflicts with the numpy<2 pin
+# that Amber-22 parmed/pytraj need. mdtraj is ONLY used by lazy imports in the
+# OpenMM MM-GBSA and visualize paths, so it is split into its own extra. Install
+# it deliberately (and in a separate env if you must) with:  pip install -e .[mdtraj]
+mdtraj = [
+    "mdtraj<1.10",
+]
+gui = [
+    "streamlit",
+    "nglview",
+]
+
+[project.scripts]
+amber-fep-driver = "amber_md.fep_driver:main"
+run-amber = "run_amber:main"
+
+[tool.setuptools]
+# run_amber.py is a top-level module (not inside the amber_md package)
+py-modules = ["run_amber"]
+
+[tool.setuptools.packages.find]
+include = ["amber_md*"]
+exclude = ["tests*", "tools*", "docs*"]
+
+[tool.setuptools.dynamic]
+version = {attr = "amber_md.__pep440_version__"}

@@ -1,0 +1,9 @@
+REMARK  Placeholder protein for the Binding Free Energy Platform examples.
+REMARK  Replace with a real, prepared receptor PDB before running.
+ATOM      1  N   ALA A   1      11.104  13.207  10.000  1.00  0.00           N
+ATOM      2  CA  ALA A   1      12.560  13.207  10.000  1.00  0.00           C
+ATOM      3  C   ALA A   1      13.100  14.600  10.000  1.00  0.00           C
+ATOM      4  O   ALA A   1      12.400  15.600  10.000  1.00  0.00           O
+ATOM      5  CB  ALA A   1      13.100  12.400  11.200  1.00  0.00           C
+TER
+END

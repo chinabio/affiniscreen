@@ -1,0 +1,4 @@
+global-exclude *.pyc *.pyo
+prune **/__pycache__
+prune *.egg-info
+prune amber_md.egg-info

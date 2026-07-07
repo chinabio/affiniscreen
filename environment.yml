@@ -1,0 +1,25 @@
+# Conda environment for Amber MD Workflow v2.2 on the login node
+# Pairs with `module load amber/22.8` (provides pmemd.cuda + AMBERHOME)
+#   conda env create -f environment.yml
+#   conda env update -f environment.yml --prune
+
+name: amber-md
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - matplotlib
+  - parmed
+  - mdanalysis
+  - mdtraj
+  - nglview
+  - pymbar
+  - streamlit
+  - pandas
+  - scipy
+  - jupyterlab
+  - pip:
+      - acpype

@@ -1,0 +1,28 @@
+# build / install artifacts -- never commit (they cause stale-version installs)
+*.egg-info/
+__pycache__/
+*.pyc
+*.pyo
+build/
+dist/
+.eggs/
+*.egg
+
+# --- added for the GitHub release ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.env
+.DS_Store
+.ipynb_checkpoints/
+# Run outputs
+Run_dir/
+*.log
+*.nc
+*.rst
+*.out
