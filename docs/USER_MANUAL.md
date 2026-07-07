@@ -148,6 +148,57 @@ help table explains which page to use for each Method × Engine × count.
 
 ---
 
+## 7. Results — MM-GBSA report
+
+A self-contained MM-GBSA report for a finished screen. Generated from the
+aggregated batch (Amber `MMPBSA.py` or OpenMM + AmberTools scoring), it presents
+the per-ligand ΔG_bind ranking together with the components that make it up:
+
+- **Ranked table** — every ligand with total ΔG_bind and its energy
+  breakdown (van der Waals, electrostatics, polar/non-polar solvation), sortable
+  and exportable to CSV.
+- **Per-residue decomposition** — optional interaction-energy breakdown by
+  residue, to see which contacts drive binding.
+- **Distributions & QC** — ΔG spread across the series and per-ligand frame
+  counts, so weakly-sampled entries are easy to spot.
+- **Export** — one-click HTML report plus the underlying CSV for downstream
+  analysis.
+
+> Use this for fast triage of a ligand series. Promote the top candidates to a
+> rigorous FEP campaign (see §4) for quantitative ranking.
+
+![Results — MM-GBSA report](images/11_mmgbsa_report.png)
+
+<!-- TODO: replace images/11_mmgbsa_report.png with an actual screenshot of the
+     MM-GBSA report view. -->
+
+---
+
+## 8. Results — FEP report
+
+A self-contained report for a finished OpenFE FEP campaign (RBFE network or
+ABFE). It auto-discovers the campaign's `*_result.json` files, treats every
+matching file as one replicate (the replicate count is whatever is on disk), and
+assembles per-ligand results with full convergence diagnostics:
+
+- **Per-ligand ΔG** — network-solved (RBFE) or absolute (ABFE) binding free
+  energies with uncertainties, ranked and exportable.
+- **Edge / transformation table** — per-edge ΔΔG, replicate agreement, and
+  **cycle-closure residuals** for the RBFE network.
+- **MBAR diagnostics** — decoded overlap matrices, forward/reverse estimates,
+  and per-window convergence for each transformation.
+- **Predicted vs experimental** — correlation plot and error metrics when
+  experimental values are supplied.
+- **Export** — one HTML report per ligand plus a campaign `index.html`, and CSV
+  of the ranked results.
+
+![Results — FEP report](images/12_fep_report.png)
+
+<!-- TODO: replace images/12_fep_report.png with an actual screenshot of the
+     FEP campaign report view. -->
+
+---
+
 ## Troubleshooting
 
 | Symptom | Likely cause | Fix |
